@@ -28,7 +28,7 @@ def main():
     wks_list = sht.worksheets()
 
     for wks in wks_list:
-        data = wks.get_all_records()
+        data = wks.get_all_records(numericise_data=False)
         for worker in data:
             if worker['notify'] == '0':
                 continue
