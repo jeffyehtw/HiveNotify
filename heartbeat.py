@@ -29,8 +29,8 @@ def main():
     sht = certificate.open_by_url(__sheet__.format(id=args.sheet))
     wks = sht.worksheet_by_title(args.farm)
     wks.update_values(args.cell, [[
-        datetime.now().strftime('%Y/%m/%d %H:%M:%S'),
-        status['miner']['total_hashrate'][:-2]
+        status['miner']['total_hashrate'][:-2],
+        datetime.now().strftime('%Y/%m/%d %H:%M:%S')
     ]])
 
 if __name__ == '__main__':
