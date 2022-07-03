@@ -1,1 +1,1 @@
-# HiveNotify
+# MinerNotify
